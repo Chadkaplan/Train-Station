@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Schedule</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery.js"></script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+
+​
+​
+​
+​
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h1>Train Schedule</h1>
+            </div>
+        </div>
+        ​
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th> 
+                    <th scope="col">First Train Time</th> 
+                    <th scope="col">Frequency (min)</th>
+
+                </tr>
+                ​
+            </thead>
+            <tbody id="table-results">
+                ​
+            </tbody>
+        </table>
+        <div class="container">
+            <form>
+                <div class="form-group">
+                    <label for="Name">Train Name</label>
+                    <input type="text" class="form-control" id="train-input" aria-describedby="nameHelp"
+                        placeholder="Name of Employee">
+                </div>
+                <div class="form-group">
+                    <label for="Role">Destination</label>
+                    <input type="text" class="form-control" id="destination-input" aria-describedby="roleHelp"
+                        placeholder="Role of Employee">
+                </div>
+                <div class="form-group">
+                    <label for="Date">First Train Time (mm/dd/YYYY)</label>
+                    <input type="text" class="form-control" id="f" aria-describedby="DateHelp"
+                        placeholder="01/25/1964">
+                </div>
+                <div class="form-group">
+                    <label for="Rate">Train Frequency</label>
+                    <input type="text" class="form-control" id="frequency-input" aria-describedby="RateHelp"
+                        placeholder="5000">
+                </div>
+                ​
+                <button type="submit" id="add-train" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-database.js"></script>
+        <script type="text/javascript" src="./assets/javascript.js"></script>
+</body>
+​
+
+</html>
