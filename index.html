@@ -8,25 +8,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Train Schedule</title>
 </head>
+<!-- Bootstrap CDN -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery.js"></script>
+<!-- MY CSS -->
+<link rel="stylesheet" href="assets/style.css">
+<!-- JQuery CDN -->
+<script src="https://code.jquery.com/jquery.js"></script>​
 
-<!-- The core Firebase JS SDK is always required and must be listed first -->
 
-​
-​
-​
-​
 
 <body>
     <div class="container">
         <div class="card">
             <div class="card-body">
-                <h1>Train Schedule</h1>
+                <h1 class="text-center">Train Schedule</h1>
             </div>
         </div>
         ​
+        <!-- The Table of Trains -->
         <table class="table">
             <thead>
                 <tr>
@@ -34,42 +34,51 @@
                     <th scope="col">Destination</th> 
                     <th scope="col">First Train Time</th> 
                     <th scope="col">Frequency (min)</th>
+                    <th scope="col">Next Train</th>
 
                 </tr>
                 ​
             </thead>
+            <!-- Append Here -->
             <tbody id="table-results">
                 ​
             </tbody>
         </table>
+        
+        <!-- Form Container -->
         <div class="container">
             <form>
                 <div class="form-group">
                     <label for="Name">Train Name</label>
-                    <input type="text" class="form-control" id="train-input" aria-describedby="nameHelp"
-                        placeholder="Name of Employee">
+                    <input type="text" class="form-control" id="train-input" 
+                        placeholder="Name of Train">
                 </div>
                 <div class="form-group">
-                    <label for="Role">Destination</label>
-                    <input type="text" class="form-control" id="destination-input" aria-describedby="roleHelp"
-                        placeholder="Role of Employee">
+                    <label for="Destination">Destination</label>
+                    <input type="text" class="form-control" id="destination-input" 
+                        placeholder="Destination of Train">
                 </div>
                 <div class="form-group">
-                    <label for="Date">First Train Time (mm/dd/YYYY)</label>
-                    <input type="text" class="form-control" id="f" aria-describedby="DateHelp"
-                        placeholder="01/25/1964">
+                    <label for="First Train">First Train Time (mm/dd/YYYY)</label>
+                    <input type="text" class="form-control" id="time-input" 
+                        placeholder="mm/dd/yyyy">
                 </div>
                 <div class="form-group">
-                    <label for="Rate">Train Frequency</label>
-                    <input type="text" class="form-control" id="frequency-input" aria-describedby="RateHelp"
-                        placeholder="5000">
+                    <label for="Frequency">Train Frequency</label>
+                    <input type="text" class="form-control" id="frequency-input"
+                        placeholder="30">
                 </div>
                 ​
                 <button type="submit" id="add-train" class="btn btn-primary">Submit</button>
             </form>
         </div>
+        <!-- Linking all the CDNS -->
+        <!-- Moment -->
+        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+        <!-- Firebase -->
         <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-database.js"></script>
+        <!-- My Javascript -->
         <script type="text/javascript" src="./assets/javascript.js"></script>
 </body>
 ​
